@@ -12,7 +12,7 @@ app.use(express.json());
 // CORS: allow frontend requests and Authorization header
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://note-app-1-cz6z.onrender.com/",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   })
