@@ -1,8 +1,9 @@
 // src/Login.js
 import { useState } from "react";
 import axios from "axios";
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:4000";
 
-const LOGIN_API = "http://localhost:4000/auth/login";
+const LOGIN_API = `${BASE_URL}/auth/login`;
 
 export default function Login({ onClose, onLoggedIn }) {
   const [form, setForm] = useState({ email: "", password: "" });

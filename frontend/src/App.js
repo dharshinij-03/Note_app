@@ -2,9 +2,10 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar"; // Assuming you have a Navbar component
 import Login from "./Login"; // Assuming you have a Login component
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:4000"; 
 
-const API = "http://localhost:4000/api/notes";
-const AUTH_ME = "http://localhost:4000/auth/me";
+const API = `${BASE_URL}/api/notes`;
+const AUTH_ME = `${BASE_URL}/auth/me`;
 
 function App() {
   const [form, setForm] = useState({ title: "", details: "" });
